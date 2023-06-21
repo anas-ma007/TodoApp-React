@@ -5,8 +5,6 @@ import { FiEdit } from 'react-icons/fi';
 import { MdDelete } from 'react-icons/md';
 import { IoMdDoneAll } from 'react-icons/io';
 
-
-
 function Todo() {
   const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState(() => {
@@ -27,9 +25,9 @@ function Todo() {
       const updateTodo = todos.map((TODO) => TODO.id === editTodo.id
         ? (TODO = { id: TODO.id, list: todo })
         : (TODO = { id: TODO.id, list: TODO.list }));
-        setTodos(updateTodo)
-        setEditId(0);
-        setTodo('');
+      setTodos(updateTodo)
+      setEditId(0);
+      setTodo('');
     }
   }
 
@@ -64,8 +62,6 @@ function Todo() {
     setEditId(editTodo.id)
   }
 
-
-
   return (
     <div className="container">
       <h2>TODO APP</h2>
@@ -88,8 +84,6 @@ function Todo() {
             ))
 
           }
-
-
         </ul>
       </div>
     </div>
