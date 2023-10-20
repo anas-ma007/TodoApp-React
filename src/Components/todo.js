@@ -72,18 +72,29 @@ function Todo() {
       <div className="list">
         <ul>
           {
-            todos.map((items) => (
-              <li className='list-items'>
-                <div className='list-items-list' id={items.status ? 'list-item' : ""}> {items.list} </div>
-                <span>
-                  <IoMdDoneAll className='list-items-icons' id='complete' title='Complete' onClick={() => onComplete(items.id)} />
-                  <FiEdit className='list-items-icons' id='edit' title='Edit' onClick={() => onEdit(items.id)} />
-                  <MdDelete className='list-items-icons' id='delete' title='Delete' onClick={() => onDelete(items.id)} />
-                </span>
-              </li>
-            ))
+            todos.length===0?(
+              <h1>No todos available</h1>
+            ) :
+            
+            (
+              
+                todos.map((items) => (
+                  <li className='list-items'>
+                    <div className='list-items-list' id={items.status ? 'list-item' : ""}> {items.list} </div>
+                    <span>
+                      <IoMdDoneAll className='list-items-icons' id='complete' title='Complete' onClick={() => onComplete(items.id)} />
+                      <FiEdit className='list-items-icons' id='edit' title='Edit' onClick={() => onEdit(items.id)} />
+                      <MdDelete className='list-items-icons' id='delete' title='Delete' onClick={() => onDelete(items.id)} />
+                    </span>
+                  </li>
+                ))
+    
+              
+            )
 
+            
           }
+         
         </ul>
       </div>
     </div>
