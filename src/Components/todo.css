@@ -82,3 +82,18 @@ ul li {
     text-decoration: line-through;
     opacity: 0.6;
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+      padding: 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .formGroup {
+      margin: 10px; /* Adjust margin for smaller screens */
+    }
+  
+    button {
+      padding: 10px 15px; /* Adjust padding for the button */
+    }
+  }
